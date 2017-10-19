@@ -1,4 +1,4 @@
-package com.bipin.practice.codechef.mock1;
+package com.bipin.practice.codechef.mock;
 
 import java.util.Arrays;
 import java.util.Scanner;
@@ -19,13 +19,15 @@ public class MaximumWeightDifference {
 			int ans = getMaxDiff(data, data.length, k);
 			System.out.println(ans);
 		}
-
+		sc.close();
 	}
 
 	private static int getMaxDiff(int[] data, int length, int k) {
 		Arrays.sort(data);
+		if (length - k < k)
+			k = length - k;
 		int sum = 0;
-		
+
 		for (int i = 0; i < k; i++) {
 			sum += data[i];
 		}
@@ -34,4 +36,5 @@ public class MaximumWeightDifference {
 		}
 		return Math.abs(sum);
 	}
+	
 }

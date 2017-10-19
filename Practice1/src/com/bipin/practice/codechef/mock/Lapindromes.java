@@ -1,4 +1,4 @@
-package com.bipin.practice.codechef.mock1;
+package com.bipin.practice.codechef.mock;
 
 import java.util.Arrays;
 import java.util.Scanner;

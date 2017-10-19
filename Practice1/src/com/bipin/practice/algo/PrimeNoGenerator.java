@@ -4,17 +4,18 @@ public class PrimeNoGenerator {
 
 	public static void main(String[] args) {
 		primeNoGen(150);
+		System.out.println("\n");
+
+		primeNoGen1(150);
 		System.out.println();
-		fibogen(15);
+		// fibogen(15);
 	}
 
 	private static void primeNoGen(int n) {
 		for (int i = 0; i < n; i++) {
 
 			int counter = 0;
-			// for (int j = i; j >= 1; j--) {
-			double var = Math.sqrt((i + 0.0))+1;
-			for (double j = var; j >= 1; j--) {
+			for (int j = i; j >= 1; j--) {
 				if (i % j == 0) {
 					counter++;
 				}
@@ -26,15 +27,23 @@ public class PrimeNoGenerator {
 
 	}
 
-	public static void fibogen(int n) {
-		int a = 0, b = 0, c = 1;
-		for (int i = 0; i <= n; i++) {
-			a = b;
-			b = c;
-			c = a + b;
-			System.out.print(c + " ");
 
+
+	private static void primeNoGen1(int n) {
+		// System.out.print("2 ,3 ,5 ,7 ,11 ,");
+		for (int i = 2; i < n; i++) {
+			boolean flag = true;
+			int var = (int) Math.sqrt(i);
+			for (int j = 2; j <= var; j = j + 1) {
+				if (i % j == 0) {
+					flag = false;
+					break;
+				}
+			}
+			if (flag) {
+				System.out.print(i + " ,");
+			}
 		}
-	}
 
+	}
 }
