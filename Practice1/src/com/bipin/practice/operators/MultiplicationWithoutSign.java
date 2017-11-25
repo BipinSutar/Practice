@@ -1,4 +1,4 @@
-package com.bipin.pactice.operators;
+package com.bipin.practice.operators;
 
 public class MultiplicationWithoutSign {
 
