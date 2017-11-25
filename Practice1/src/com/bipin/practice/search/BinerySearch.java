@@ -11,11 +11,11 @@ public class BinerySearch {
 		System.out.println(binarySearchRecursive(A, 66, 0, A.length - 1));
 		System.out.println(binarySearch(A, 66));
 
-		int arr[] = { 1, 2, 2, 3, 3, 3, 4
+		int arr[] = {1, 1, 2, 2, 3, 3, 3, 4
 				};
 
 		// Element to be counted in arr[]
-		int x = 3;
+		int x = 1;
 		System.out.println(binarySearchFirst(arr, x, 0, arr.length - 1));
 		System.out.println(binarySearchLast(arr, x, 0, arr.length - 1));
 
