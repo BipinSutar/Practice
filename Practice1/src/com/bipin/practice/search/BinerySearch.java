@@ -11,8 +11,7 @@ public class BinerySearch {
 		System.out.println(binarySearchRecursive(A, 66, 0, A.length - 1));
 		System.out.println(binarySearch(A, 66));
 
-		int arr[] = {1, 1, 2, 2, 3, 3, 3, 4
-				};
+		int arr[] = { 1, 1, 2, 2, 3, 3, 3, 4 };
 
 		// Element to be counted in arr[]
 		int x = 1;
@@ -54,6 +53,8 @@ public class BinerySearch {
 
 	public static int binarySearchFirst(int A[], int v, int lo, int hi) {
 		int mid = (lo + hi) / 2;
+		if (mid == 1 && A[0] == v)
+			return 0;
 		if ((A[mid] == v) && (mid == 0 | A[mid - 1] < v))
 			return mid;
 		if (lo >= hi)
