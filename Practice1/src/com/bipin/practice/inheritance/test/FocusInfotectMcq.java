@@ -2,6 +2,8 @@ package com.bipin.practice.inheritance.test;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Scanner;
 import java.util.TreeMap;
 
 class A {
@@ -45,7 +47,7 @@ class D implements B { // Q18
 public class FocusInfotectMcq {
 
 	public static void main(String[] args) {
-		Q20();
+		// Q20();
 		// Q21();
 		// Q25Test q25Test1 = new Q25Test();
 		// Q25Test q25Test2 = new Q25Test();
@@ -53,6 +55,28 @@ public class FocusInfotectMcq {
 		// System.out.println(++q25Test2.x);
 		// new Q29Test().computeTreeMap();
 		// new Q28Test().compteArrayList();
+		Scanner sc = new Scanner(System.in);
+		int n = Integer.parseInt(sc.nextLine());
+		HashMap<Character, Character> data = new HashMap<Character, Character>();
+		while (n-- > 0) {
+			String lines[] = sc.nextLine().split(" ");
+			data.put(lines[0].charAt(0), lines[1].charAt(0));
+			//data.put(lines[1].charAt(0), lines[0].charAt(0));
+		}
+		String in = sc.nextLine();
+		String temp = new String(in);
+		for (int i = 0; i < in.length(); i++) {
+			char ch = in.charAt(i);
+			Character obj = data.get(ch);
+			if (obj != null) {
+				temp = in.replace(ch, obj.charValue());
+				//temp = in.replace(obj.charValue(), ch);
+			}
+
+		}
+		System.out.println(temp);
+
+		sc.close();
 	}
 
 	private static void Q2() {
