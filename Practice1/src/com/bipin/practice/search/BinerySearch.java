@@ -55,7 +55,7 @@ public class BinerySearch {
 		int mid = (lo + hi) / 2;
 		if (mid == 1 && A[0] == v)
 			return 0;
-		if ((A[mid] == v) && (mid == 0 | A[mid - 1] < v))
+		if ((A[mid] == v) && (mid == 0 || A[mid - 1] < v))
 			return mid;
 		if (lo >= hi)
 			return -1;
