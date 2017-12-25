@@ -29,9 +29,9 @@ class Canvas1 {
 
 	public void drawLine1(int x1, int y1, int x2, int y2, char mchar) {
 		for (int i = y1; i <= y2; i++) {
-			if (i < canvasArray.length) {
+			if (i < canvasArray.length - 1 && i > 0) {
 				for (int j = x1; j <= x2; j++) {
-					if (j < canvasArray[0].length)
+					if (j < canvasArray[0].length - 1 && j > 0)
 						canvasArray[i][j] = mchar;
 
 				}
@@ -48,13 +48,14 @@ class Canvas1 {
 	}
 
 	public void drawRectangle(int x1, int y1, int x2, int y2, char mchar) {
-		drawLine(x1, y1, x2, y1, mchar);
-		drawLine(x1, y1, x1, y2, mchar);
-		drawLine(x2, y1, x2, y2, mchar);
-		drawLine(x1, y2, x2, y2, mchar);
+		drawLine1(x1, y1, x2, y1, mchar);
+		drawLine1(x1, y1, x1, y2, mchar);
+		drawLine1(x2, y1, x2, y2, mchar);
+		drawLine1(x1, y2, x2, y2, mchar);
 	}
 
 	public void bucketFill(int x, int y, char mchar) throws InterruptedException {
+		System.out.println("(int) canvasArray[y][x] " + (int) canvasArray[y][x]);
 		if ((int) canvasArray[y][x] != 0) {
 			return;
 		}
@@ -101,7 +102,7 @@ public class DrawingCololePragram {
 					System.err.println("Draw a canvas first");
 					return;
 				}
-				canvas.drawLine(Integer.parseInt(cmd[1]), Integer.parseInt(cmd[2]), Integer.parseInt(cmd[3]),
+				canvas.drawLine1(Integer.parseInt(cmd[1]), Integer.parseInt(cmd[2]), Integer.parseInt(cmd[3]),
 						Integer.parseInt(cmd[4]), 'X');
 				canvas.render();
 				break;

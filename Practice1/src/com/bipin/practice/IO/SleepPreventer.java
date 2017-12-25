@@ -3,6 +3,7 @@ package com.bipin.practice.IO;
 import java.awt.AWTException;
 import java.awt.Robot;
 import java.util.Random;
+import java.util.Set;
 
 class SleepPreventerRunnable implements Runnable {
 
@@ -30,9 +31,24 @@ class SleepPreventerRunnable implements Runnable {
 
 public class SleepPreventer {
 	public static void main(String[] args) throws Exception {
-		SleepPreventerRunnable sr = new SleepPreventerRunnable();
-		Thread t = new Thread(sr, "Thread-SleepPreventer");
-		t.setPriority(Thread.MIN_PRIORITY);
-		t.start();
+		// SleepPreventerRunnable sr = new SleepPreventerRunnable();
+		// Thread t = new Thread(sr, "Thread-SleepPreventer");
+		// t.setPriority(Thread.MIN_PRIORITY);
+		// t.start();
+		Set<Thread> threadSet = Thread.getAllStackTraces().keySet();
+		for (Thread t : threadSet) {
+			if (t.getThreadGroup() == Thread.currentThread().getThreadGroup()) {
+				System.out.println("Thread :" + t + ":" + "state:" + t.getState());
+			}
+		}
+		System.out.println(getThreadByName("Thread-SleepPreventer"));
+	}
+
+	public static Thread getThreadByName(String threadName) {
+		for (Thread t : Thread.getAllStackTraces().keySet()) {
+			if (t.getName().equals(threadName))
+				return t;
+		}
+		return null;
 	}
 }
