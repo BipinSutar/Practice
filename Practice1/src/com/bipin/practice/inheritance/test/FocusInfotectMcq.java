@@ -47,6 +47,10 @@ class D implements B { // Q18
 public class FocusInfotectMcq {
 
 	public static void main(String[] args) {
+		star(5);
+		checkAssertions(5);
+		checkAssertions(21);
+		System.exit(0);
 		// Q20();
 		// Q21();
 		// Q25Test q25Test1 = new Q25Test();
@@ -61,7 +65,7 @@ public class FocusInfotectMcq {
 		while (n-- > 0) {
 			String lines[] = sc.nextLine().split(" ");
 			data.put(lines[0].charAt(0), lines[1].charAt(0));
-			//data.put(lines[1].charAt(0), lines[0].charAt(0));
+			// data.put(lines[1].charAt(0), lines[0].charAt(0));
 		}
 		String in = sc.nextLine();
 		String temp = new String(in);
@@ -70,7 +74,7 @@ public class FocusInfotectMcq {
 			Character obj = data.get(ch);
 			if (obj != null) {
 				temp = in.replace(ch, obj.charValue());
-				//temp = in.replace(obj.charValue(), ch);
+				// temp = in.replace(obj.charValue(), ch);
 			}
 
 		}
@@ -85,6 +89,19 @@ public class FocusInfotectMcq {
 			if (i < j--)
 				System.out.print(i * j + " ");
 		}
+	}
+
+	private static void star(int i) {
+		if (i > 1) {
+			star(i / 2);
+			star(i / 2);
+		}
+		System.out.println("Hello");
+	}
+
+	private static void checkAssertions(int a) {
+		assert (a >= 0 && a <= 20) :  "Invalid number from checkAssertions " + FocusInfotectMcq.class.getName();
+
 	}
 
 	private static void Q20() {

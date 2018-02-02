@@ -47,16 +47,6 @@ public class QuickSort {
 		return a;
 	}
 
-	public int[] quicksort1(int[] a, int start, int end) {
-		if (start < end) {
-			int pIndex = partitionArrayForQuickSort(a, start, end);
-			quicksort(a, start, pIndex - 1);
-			quicksort(a, pIndex + 1, end);
-		}
-
-		return a;
-	}
-
 	public static int partitionArrayForQuickSort(int a[], int start, int end) {
 		int pivot = a[end];
 		int pIndex = start;
