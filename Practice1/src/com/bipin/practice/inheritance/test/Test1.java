@@ -5,6 +5,7 @@ import com.bipin.practice.inheritance.Child2;
 import com.bipin.practice.inheritance.Parent;
 import com.bipin.practice.inheritance.assembler.Assembler;
 
+
 public class Test1 {
 
 	public static void main(String[] args) {
