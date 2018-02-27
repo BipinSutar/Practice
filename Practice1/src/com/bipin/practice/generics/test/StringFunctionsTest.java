@@ -5,7 +5,7 @@ public class StringFunctionsTest {
 	public static void main(String[] args) {
 		System.out.println("dc".compareTo("ba"));
 
-		byte[] b = "AAA".getBytes();
+		byte[] b = "ABC".getBytes();
 		for (byte bb : b) {
 			System.out.print(bb + " ");
 

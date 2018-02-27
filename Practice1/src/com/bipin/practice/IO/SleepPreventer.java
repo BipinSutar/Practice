@@ -8,7 +8,7 @@ import java.util.Set;
 class SleepPreventerRunnable implements Runnable {
 
 	@Override
-	public void run() { 
+	public void run() {
 		try {
 			System.out.println(" Sleep Preventer running with low priority thread");
 			Robot hal = new Robot();
@@ -35,12 +35,13 @@ public class SleepPreventer {
 		// Thread t = new Thread(sr, "Thread-SleepPreventer");
 		// t.setPriority(Thread.MIN_PRIORITY);
 		// t.start();
+		new SleepPreventerRunnable().run();
 		Set<Thread> threadSet = Thread.getAllStackTraces().keySet();
 		for (Thread t : threadSet) {
 			if (t.getThreadGroup() == Thread.currentThread().getThreadGroup()) {
 				System.out.println("Thread :" + t + ":" + "state:" + t.getState());
 			}
-		} 
+		}
 		System.out.println(getThreadByName("Thread-SleepPreventer"));
 	}
 

@@ -48,10 +48,15 @@ public class ExceptionsOverridingDemo {
 	public int checkFinally() {
 		int i = 5;
 		try {
+			System.exit(0);
 			return i;
+		} catch (IndexOutOfBoundsException | ArithmeticException re) {
+			return i + 10;
 		} finally {
+
 			i = i + 31;// will make i = 36 but will return 5
 			return i;// will make i = 36 and will return 36
+
 		}
 	}
 }
