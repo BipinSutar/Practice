@@ -8,7 +8,10 @@ public class Euclid_GCD {
 		int gcd = getGCDUsingEuclid_Recursive(first, second);
 		int lcm = (first * second) / gcd;
 		System.out.println("GCD is " + gcd + " LCM is " + lcm);
-
+		int n = 9;
+		for (int i = 1; i <= n; i++) {
+			System.out.println("GCD of " + i + " and " + n + " is " + getGCDUsingEuclid(i, n));
+		}
 	}
 
 	public static int getGCDUsingEuclid(int a, int b) {
