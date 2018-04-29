@@ -56,6 +56,12 @@ public class CreditSuisse_TwoGroups {
 	}
 
 	public static long power2(long n) {
+		if (n == 0)
+			return 0;
+		if (n == 1)
+			return 0;
+		if (n < 0)
+			return 0;
 		long ret = 1;
 		long a = 2;
 		long MODULO = 1000000007;
@@ -66,6 +72,6 @@ public class CreditSuisse_TwoGroups {
 			n >>= 1;
 			// System.out.println("n= " + n + " a =" + a + " ret=" + ret);
 		}
-		return (ret - 2) % MODULO;
+		return (ret - 2);// % MODULO;
 	}
 }

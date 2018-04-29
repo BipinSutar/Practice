@@ -8,6 +8,10 @@ interface Person {
 	default void print1() {
 		System.out.println("Default for person who eats");
 	}
+
+	default boolean equals() {
+		return true;
+	}
 }
 
 interface Mamal {
@@ -17,10 +21,8 @@ interface Mamal {
 }
 
 abstract class PersonAbtract implements Person {
-	@Override
-	public void print1() {
-		System.out.println("default abstract override for person who eats");
-	}
+	// @Override public void print1() {System.out.println("default abstract override
+	// for person who eats"); }
 }
 
 public class InterFaceStaticMethodDemo implements Person, Mamal {
@@ -33,6 +35,10 @@ public class InterFaceStaticMethodDemo implements Person, Mamal {
 			}
 
 		};
+		Person p1 = new Person() {
+
+		};
+		p1.print1();
 		p.print1();
 		int a = 10;
 		int b = 20;

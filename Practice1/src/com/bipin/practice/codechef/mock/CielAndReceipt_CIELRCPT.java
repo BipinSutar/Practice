@@ -22,7 +22,7 @@ public class CielAndReceipt_CIELRCPT {
 		int[] ints = new int[] { 1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024, 2048 };
 		for (int i = ints.length - 1; i >= 0; i--) {
 			int div = num / ints[i];
-			if ((div) > 0) {
+			if (div > 0) {
 				times += div;
 				num %= ints[i];
 			}

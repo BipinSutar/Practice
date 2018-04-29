@@ -3,15 +3,15 @@ package com.bipin.practice.sort;
 public class MergeSort {
 
 	public static void main(String[] args) {
-		int len = 10;
+		int len = 100000;
 		int data[] = new int[len];
 		long start = System.currentTimeMillis();
 		for (int i = 0; i < len; i++) {
 			data[i] = (int) (Math.random() * 50);
-			 System.out.print(data[i] + " , ");
+			//System.out.print(data[i] + " , ");
 		}
 
-		int qdata[] = new QuickSort().quicksort1(data, 0, data.length - 1);
+		int qdata[] = QuickSort.quicksort(data, 0, data.length - 1);
 
 		long endquick = System.currentTimeMillis();
 		System.out.println("Quick sort " + (endquick - start) / 1000.0);
@@ -19,11 +19,10 @@ public class MergeSort {
 
 		endquick = System.currentTimeMillis();
 		System.out.println("Merge sort " + (endquick - start) / 1000.0);
-		for (int i : mdata)
-			System.out.print(i + " , ");
-		{
-
+		for (int i : mdata) {
+			// System.out.print(i + " , ");
 		}
+
 		for (int i = 0; i < len; i++) {
 			if (qdata[i] != mdata[i]) {
 				System.out.println("fail");

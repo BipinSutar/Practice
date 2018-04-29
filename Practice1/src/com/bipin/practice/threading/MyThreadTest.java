@@ -27,8 +27,8 @@ public class MyThreadTest {
 
 	private void stageOne() {
 		// synchronized (MyThreadTest.class) {// 4968 milliseconds
-		//synchronized (this) {// 6140 milliseconds
-			 synchronized (lock1) {// 2980 milliseconds
+		// synchronized (this) {// 6140 milliseconds
+		synchronized (lock1) {// 2980 milliseconds
 			try {
 				Thread.sleep(1);
 			} catch (InterruptedException e) {
@@ -40,15 +40,29 @@ public class MyThreadTest {
 	}
 
 	private void stageTwo() {
-		//synchronized (MyThreadTest.class) {// 4968 milliseconds
-			// synchronized (this) {// 4968 milliseconds
-			 synchronized (lock2) {// 2980 milliseconds
+		// synchronized (MyThreadTest.class) {// 4968 milliseconds
+		// synchronized (this) {// 4968 milliseconds
+		synchronized (lock2) {// 2980 milliseconds
 			try {
 				Thread.sleep(1);
 			} catch (InterruptedException e) {
 				e.printStackTrace();
 			}
 			list2.add(random.nextInt(5000));
+
+		}
+	}
+
+	private void stageTwoProblem() {
+		// synchronized (MyThreadTest.class) {// 4968 milliseconds
+		// synchronized (this) {// 4968 milliseconds
+		synchronized (lock2) {// 2980 milliseconds // solution is change lock2 to lock1
+			try {
+				Thread.sleep(1);
+			} catch (InterruptedException e) {
+				e.printStackTrace();
+			}
+			list1.add(random.nextInt(5000));// problem is here
 
 		}
 	}
