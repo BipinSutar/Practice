@@ -11,6 +11,7 @@ package com.bipin.practice.algo;
 public class CompareWithoutComparisionOperatorTest {
 
 	public static void main(String[] args) {
+		System.out.println("hello world");
 		long a = Long.MAX_VALUE;
 		long b = Long.MAX_VALUE - 2;
 		System.out.println("A " + a + " b " + b);
