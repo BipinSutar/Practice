@@ -22,5 +22,27 @@ class Wissen_06AprTest {
 		assertTrue(actualList.contains(instance.new SubArrayPositionAns(2, 2)));
 		assertTrue(actualList.size() == 3);
 	}
+	@Test
+	void test_getSubArrayPositionAns1() {
+		int sameElement = 1;
+		int arr[] = new int[]{sameElement, sameElement, sameElement,
+				sameElement, sameElement, sameElement, sameElement, sameElement,
+				sameElement, sameElement, sameElement, sameElement,
+				sameElement};
+		Set<SubArrayPositionAns> actualList = instance
+				.getSubArrayPositionAns(arr);
+		assertTrue(actualList.contains(
+				instance.new SubArrayPositionAns(sameElement, arr.length)));
+		assertTrue(actualList.size() == 1);
+		sameElement = 2;
+		arr = new int[]{sameElement, sameElement, sameElement, sameElement,
+				sameElement, sameElement, sameElement, sameElement, sameElement,
+				sameElement, sameElement, sameElement, sameElement, sameElement,
+				sameElement, sameElement};
+		actualList = instance.getSubArrayPositionAns(arr);
+		assertTrue(actualList.contains(
+				instance.new SubArrayPositionAns(1, arr.length)));
+		assertTrue(actualList.size() == 1);
 
+	}
 }
