@@ -30,7 +30,7 @@ class Base {
 
 class Derived extends Base {
 	public static void fun() {
-		System.out.println(super.x);
+		//System.out.println(super.x);
 	}
 }
 
@@ -43,21 +43,11 @@ class Super {
 	}
 }
 
-class Sub extends Super {
-	public Sub(String text) {
-		i = 2;
-	}
-
-	public static void main2(String args[]) {
-		Sub sub = new Sub("Hello");
-		System.out.println(sub.i);
-	}
-}
 
 class Test {
 	public Test() {
 		int x = 5;
-		return x;
+		//return x;
 	}
 }
 

@@ -17,9 +17,9 @@ interface B {
 class C extends A implements B {
 	int x;
 
-	final C() {// Q8
-
-	}
+	// final C() {// Q8
+	//
+	// }
 
 	C(int x) {
 		x = x;// Q6
@@ -31,17 +31,14 @@ class C extends A implements B {
 		try {
 			int temp = a / b;
 		} catch (Exception e) {
-		} catch (ArithmeticException e) {// Q19
-
 		}
 	}
 }
 
 class D implements B { // Q18
 	A a = new A();
-	C c = new C();
+	// C c = new C();
 	D d = new D();
-	A a1 = (A) d;
 }
 
 public class FocusInfotectMcq {
@@ -100,7 +97,8 @@ public class FocusInfotectMcq {
 	}
 
 	private static void checkAssertions(int a) {
-		assert (a >= 0 && a <= 20) :  "Invalid number from checkAssertions " + FocusInfotectMcq.class.getName();
+		assert (a >= 0 && a <= 20) : "Invalid number from checkAssertions "
+				+ FocusInfotectMcq.class.getName();
 
 	}
 
@@ -117,7 +115,8 @@ public class FocusInfotectMcq {
 	private static void Q21() {
 		String str = "java";
 		String str1 = new String("java");
-		System.out.print((str == str1) + " " + (str.equals(str1)) + " " + (str.compareTo(str1)));
+		System.out.print((str == str1) + " " + (str.equals(str1)) + " "
+				+ (str.compareTo(str1)));
 	}
 
 }
@@ -131,19 +130,13 @@ class Parent {
 }
 
 class Child extends Parent {
-	void show() {// Q17 answer is compilation fails;
-
-	}
+	// void show() {// Q17 answer is compilation fails;
+	//
+	// }
 }
 
 class MyParent {
 	void show() throws RuntimeException {
-
-	}
-}
-
-class MyChild extends MyParent {
-	void show() throws IOException { // Q30
 
 	}
 }

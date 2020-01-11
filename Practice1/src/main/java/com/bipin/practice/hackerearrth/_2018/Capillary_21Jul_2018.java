@@ -9,9 +9,13 @@ import java.util.Map;
 import java.util.TreeMap;
 
 public class Capillary_21Jul_2018 {
+	public Capillary_21Jul_2018() {
 
-	public static void main(String[] args) throws IOException {// main for Unit Balancer
-		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+	}
+	public static void main(String[] args) throws IOException {// main for Unit
+																// Balancer
+		BufferedReader br = new BufferedReader(
+				new InputStreamReader(System.in));
 		String symbols[] = br.readLine().split(",");
 		int M = symbols.length - 1;
 		String data[] = new String[M];
@@ -19,7 +23,8 @@ public class Capillary_21Jul_2018 {
 			data[i] = br.readLine();
 		}
 
-		System.out.println(new Capillary_21Jul_2018().getUnitBalancer(symbols, data));
+		System.out.println(
+				new Capillary_21Jul_2018().getUnitBalancer(symbols, data));
 		br.close();
 	}
 

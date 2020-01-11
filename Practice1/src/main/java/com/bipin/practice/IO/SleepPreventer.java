@@ -2,23 +2,26 @@ package com.bipin.practice.IO;
 
 import java.awt.AWTException;
 import java.awt.Robot;
-import java.util.Random;
 import java.util.Set;
-
+import java.awt.MouseInfo;
+//To Compile mvn clean install -Dmaven.test.skip=true
 class SleepPreventerRunnable implements Runnable {
-
+public static final int ONE_SECOND = 1000;
+public static final int ONE_MINUTE = 60 * ONE_SECOND;
+public static final int FOUR_MINUTE = ONE_MINUTE * 4;
+public static final int moveby = 5;
+private boolean flag = false;
 	@Override
 	public void run() {
 		try {
 			System.out.println(" Sleep Preventer running with low priority thread");
-			Robot hal = new Robot();
-			Random random = new Random();
+			Robot hal = new Robot();			
 			while (true) {
-				hal.delay(1000 * 60);
-				Thread.sleep(4000 * 60);
-				int x = random.nextInt() % 640;
-				int y = random.nextInt() % 480;
-				hal.mouseMove(x, y);
+				Thread.sleep(ONE_MINUTE * 2);
+				int x = MouseInfo.getPointerInfo().getLocation().x;
+				int y = MouseInfo.getPointerInfo().getLocation().y;
+				hal.mouseMove(x + moveby, y - moveby);	
+				
 			}
 		} catch (AWTException e) {
 			e.printStackTrace();

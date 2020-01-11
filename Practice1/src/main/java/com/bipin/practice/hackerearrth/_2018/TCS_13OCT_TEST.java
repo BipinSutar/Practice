@@ -15,14 +15,14 @@ interface Added {
 	int getInput(int a, int b);
 }
 
-@FunctionalInterface
-interface SmartAdded extends Added {
-	int getInput(double a, double b);
-}
-
-@FunctionalInterface
-interface Nothing {
-}
+// @FunctionalInterface
+// interface SmartAdded extends Added {
+// int getInput(double a, double b);
+// }
+//
+// @FunctionalInterface
+// interface Nothing {
+// }
 
 @FunctionalInterface
 interface FuncInt {
@@ -35,7 +35,7 @@ interface FuncInt {
 
 public class TCS_13OCT_TEST {
 	public static void main0(String[] args) {
-		int[] array = { 6, 9, 8 };
+		int[] array = {6, 9, 8};
 		List<Integer> list = new ArrayList<>();
 		list.add(array[0]);
 		list.add(array[2]);
@@ -61,7 +61,8 @@ public class TCS_13OCT_TEST {
 	}
 
 	public static void main(String[] args) throws IOException {
-		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		BufferedReader br = new BufferedReader(
+				new InputStreamReader(System.in));
 		String s = br.readLine();
 		if (s.length() < 100) {
 			System.out.println(GetCount1(s));
@@ -124,20 +125,23 @@ public class TCS_13OCT_TEST {
 	}
 
 	public static boolean isVowel(char c) {
-//		if (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u' || c == 'A' || c == 'E' || c == 'I' || c == 'O'
-//				|| c == 'U') {
-//			return true;
-//		}
-		if (c != 'a' && c != 'e' && c != 'i' && c != 'o' && c != 'u' && c != 'A' && c != 'E' && c != 'I' && c != 'O'
-				&& c != 'U') {
+		// if (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u' || c ==
+		// 'A' || c == 'E' || c == 'I' || c == 'O'
+		// || c == 'U') {
+		// return true;
+		// }
+		if (c != 'a' && c != 'e' && c != 'i' && c != 'o' && c != 'u' && c != 'A'
+				&& c != 'E' && c != 'I' && c != 'O' && c != 'U') {
 			return false;
 		}
 		return true;
 	}
 
-	public static void mainMinimumSumSubarray(String[] args) throws IOException {
+	public static void mainMinimumSumSubarray(String[] args)
+			throws IOException {
 		// MinimumSumSubarray
-		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+		BufferedReader br = new BufferedReader(
+				new InputStreamReader(System.in));
 		int n = Integer.parseInt(br.readLine());
 		int arr[] = new int[n];
 		String line[] = br.readLine().trim().split(" ");
@@ -174,12 +178,4 @@ public class TCS_13OCT_TEST {
 	}
 }
 
-class _C extends DateTimeException {
-	private static int $;
 
-	public static void main1(String[] main) {
-		String a_b;
-		System.out.print($);
-		System.out.print(a_b);
-	}
-}

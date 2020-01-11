@@ -1,12 +1,13 @@
 package com.bipin.practice.inheritance.test;
 
 class SingleTonParent {
-	private SingleTonParent() {
+	public SingleTonParent() {
 	}
 }
 
 class SingleTonChild extends SingleTonParent {
 	SingleTonChild() {
+		super();
 	}
 }
 
