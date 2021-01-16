@@ -1,3 +1,0 @@
-		Prcision Pattern Works			
-Sr No.	Iteam ID  	  Dscription 	   Quantity 	   Price 1 Unit  	 Total Price
-1	100	Molding rubber vessel	10	1205	12050
