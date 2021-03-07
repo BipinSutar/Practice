@@ -1,24 +1,23 @@
 package com.bipin.practice.media;
+import java.awt.Button;
+import java.awt.event.ActionEvent;
+import java.beans.EventHandler;
 import java.io.File;
-import java.net.URI;
+import java.time.Duration;
 
+import javax.print.attribute.standard.Media;
 import javax.swing.JFrame;
 import javax.swing.SwingUtilities;
+import javax.swing.event.ChangeListener;
 
 import javafx.application.Platform;
-import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.embed.swing.JFXPanel;
-import javafx.event.ActionEvent;
-import javafx.event.EventHandler;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
 import javafx.scene.layout.VBox;
-import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 import javafx.scene.media.MediaView;
-import javafx.util.Duration;
 
 public class VideoPlayer extends JFrame {
 	static File f = new File("F:\\movies\\Killa2015.mp4");
