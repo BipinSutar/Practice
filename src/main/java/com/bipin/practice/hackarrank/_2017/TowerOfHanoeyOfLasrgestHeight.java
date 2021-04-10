@@ -1,4 +1,4 @@
-package com.bipin.practice.hackarrank.morgan_stanley_11_nov.test;
+package com.bipin.practice.hackarrank._2017;
 
 import java.util.*;
 
