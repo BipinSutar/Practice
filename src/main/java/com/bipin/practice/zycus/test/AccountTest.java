@@ -1,4 +1,4 @@
-package bipin.zycus.test;
+package com.bipin.practice.zycus.test;
 
 import java.io.BufferedReader;
 import java.io.IOException;

@@ -1,4 +1,4 @@
-package bipin.zycus.test;
+package com.bipin.practice.zycus.test;
 
 public class Account {
 	final private int n;

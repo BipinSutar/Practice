@@ -1,4 +1,4 @@
-package bipin.test.drawingConsole;
+package com.bipin.practice.zycus.drawingConsole.test;
 
 import java.util.Scanner;
 
