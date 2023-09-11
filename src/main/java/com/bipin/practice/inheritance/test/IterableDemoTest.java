@@ -3,7 +3,6 @@ package com.bipin.practice.inheritance.test;
 import java.util.ArrayList;
 import java.util.Iterator;
 
-import com.sun.swing.internal.plaf.metal.resources.metal;
 
 class ITEmp implements Iterable<ITEmp> {
 	ArrayList<ITEmp> lists;
