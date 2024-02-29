@@ -6,8 +6,10 @@ public class ProductOfArrayExceptSelf_238 {
 
 	public static void main(String[] args) {
 		int nums[] = new int[] { -1, -2, 0, -3, 3 };
+		System.out.println(Arrays.toString(new ProductOfArrayExceptSelf_238().productExceptSelf(nums)));
 		System.out.println(Arrays.toString(new ProductOfArrayExceptSelf_238().productExceptSelf1(nums)));
 		nums = new int[] { 1, 2, 3, 4 };
+		System.out.println(Arrays.toString(new ProductOfArrayExceptSelf_238().productExceptSelf(nums)));
 		System.out.println(Arrays.toString(new ProductOfArrayExceptSelf_238().productExceptSelf1(nums)));
 	}
 
