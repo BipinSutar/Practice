@@ -3,7 +3,7 @@ package com.bipin.practice.leetcode;
 import java.io.IOException;
 import java.util.Arrays;
 
-public class Atul_CreditAgricole_20Feb2020 {
+public class CreditAgricole_20Feb2020 {
 
 	public static void main(String[] args) throws IOException {
 		System.out.println(process("DC501"));
