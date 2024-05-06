@@ -35,7 +35,7 @@ public class ProcessorWaitNotifyLowLevelLockDemo {
 				lock.notify();
 
 			}
-			Thread.sleep(r.nextInt(10));
+			Thread.sleep(2000);
 
 		}
 	}
@@ -48,7 +48,6 @@ public class ProcessorWaitNotifyLowLevelLockDemo {
 
 				try {
 					obj.produce();
-
 				} catch (InterruptedException e) {
 					// TODO Auto-generated catch block
 					e.printStackTrace();
